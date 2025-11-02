@@ -54,6 +54,37 @@ public class Main {
                 System.out.println(colorRojo+"Acceso denegado, " + intentos + " de 3 ");
             }
         }
+        //Si se supera el numero de intentos fallidos el sistema termina la ejecucion//
+        //! significa NEGACION, en este caso seria si acceso permitido falso proceda a denegar el acceso//
+        if (!accesoPermitido) {
+            System.out.println(colorRojo + "Acceso Denegado Por Maximo De Intentos");
+        }
+
+        //Menu//
+
+        System.out.println(colorNaranja + "===== MENÚ PRINCIPAL =====");
+        System.out.println(colorVerde + "1. Registrar venta");
+        System.out.println(colorAzul + "2. Mostrar ventas del día");
+        System.out.println(colorMorado + "3. Salir");
+        System.out.println(colorNaranja + "==========================");
+
+        System.out.print(colorBlanco+"Elija una opcion del 1 al 3: ");
+        int opcion = leerTeclado.nextInt();
+
+        //Opciones multiples  :) //
+        switch (opcion) {
+            case 1:
+                System.out.println(colorVerde + "Opcion 1: Registrar Venta");
+                break;
+            case 2:
+                System.out.println(colorAzul+"Opcion 2: Ventas del dia");
+                break;
+            case 3:
+                System.out.println(colorRojo+"Saliendo...");
+                break;
+            default:
+                System.out.println("Opcion Invalida");
+        }
         //Diseñar un algoritmo que permita mostrar un menu de opciones
         //si el usuario se autentico conn exito, el menu sera el siguiente:
         //1. Registrar venta
